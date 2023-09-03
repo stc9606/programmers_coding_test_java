@@ -8,7 +8,10 @@ public class 교점에별만들기 {
     public static void main(String[] args) {
         int[][] line = {{ 2, -1, 4 }, { -2, -1, 4 }, { 0, -1, 1 }, { 5, -8, -12 }, { 5, 8, 12 }};
 
-        System.out.println(Arrays.toString(solution(line)));
+        String[] result = solution(line);
+
+        for (String s : result)
+            System.out.println(s);
     }
 
     private static class Point {
@@ -21,7 +24,7 @@ public class 교점에별만들기 {
     }
 
     private static Point intersection(long a1, long b1, long c1, long a2, long b2, long c2) {
-        double x = (double) (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b2);
+        double x = (double) (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
         double y = (double) (a2 * c1 - a1 * c2) / (a1 * b2 - a2 * b1);
 
         if (x % 1 != 0 || y % 1 != 0)

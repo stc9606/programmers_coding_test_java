@@ -1,4 +1,4 @@
-package org.example.level2;
+package org.example.array;
 
 public class 삼각달팽이 {
 

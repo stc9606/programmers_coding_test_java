@@ -1,12 +1,12 @@
-package org.example.level2;
+package org.example.array;
 
 public class 거리두기 {
 
     private static final String[][] places = {{"P000P", "0XX0X", "0PXPX", "00X0X", "P0XXP"}, {"P00PX", "0XPXP", "PXXX0", "0XXX0", "000PP"},
             {"PX0PX", "0X0XP", "0XP0X", "0XX0P", "PXP0X"}, {"000XX", "X000X", "000XX", "0X00X", "00000"}, {"PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"}};
 
-    private static final int dx[] = {0, 0, -1, 1};
-    private static final int dy[] = {-1, 1, 0, 0};
+    private static final int dx[] = {0, -1, 1, 0};
+    private static final int dy[] = {-1, 0, 0, 1};
 
     public static void main(String[] args) {
         int[] answer = new int[places.length];
@@ -54,7 +54,7 @@ public class 거리두기 {
             switch (room[ny][nx]) {
                 case 'P': return false;
                 case '0':
-                    if (isNextToVolunteer(room, nx, ny, 3 -d))
+                    if (isNextToVolunteer(room, nx, ny, 3 - d))
                         return false;
                     break;
             }

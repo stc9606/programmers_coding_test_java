@@ -1,4 +1,4 @@
-package org.example.array;
+package com.programmers.array;
 
 public class 삼각달팽이 {
 

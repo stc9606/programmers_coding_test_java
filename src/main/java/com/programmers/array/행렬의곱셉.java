@@ -1,4 +1,4 @@
-package org.example.array;
+package com.programmers.array;
 
 import java.util.Arrays;
 
@@ -23,5 +23,16 @@ public class 행렬의곱셉 {
         }
 
         System.out.println(Arrays.deepToString(result));
+
+        // Auto Boxing: int를 Integer로 자동 변환
+        int primitiveInt = 42;
+        Integer wrapperInt = primitiveInt;
+
+        System.out.println("primitiveInt: " + primitiveInt);
+        System.out.println("wrapperInt: " + wrapperInt);
+
+        // Auto Boxing을 사용하지 않는 경우
+        Integer manuallyBoxedInt = Integer.valueOf(primitiveInt);
+
     }
 }

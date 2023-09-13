@@ -9,23 +9,20 @@ public class 모음사전 {
     private static final String WORD = "AAAE";
 
     public static void main(String[] args) {
-        List<String> generate = generate("AAA");
-        int i = generate("AAA").indexOf(WORD);
+        List<String> words = new ArrayList<>();
+        generate("AAA", words);
 
-        System.out.println(i);
+        System.out.println(words.indexOf(WORD));
     }
 
-    private static List<String> generate(final String word) {
-        List<String> words = new ArrayList<>();
+    private static void generate(final String word, final List<String> words) {
         words.add(word);
 
         if (word.length() == 5)
-            return words;
+            return;
 
         for (char c : CHARS) {
-            words.addAll(generate(word + c));
+            generate(word + c, words);
         }
-
-        return words;
     }
 }

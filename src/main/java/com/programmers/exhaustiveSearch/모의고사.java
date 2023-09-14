@@ -16,9 +16,7 @@ public class 모의고사 {
     private static final int[] ANSWERS = {3, 3, 1, 1, 2, 2, 4, 4, 5, 5};
 
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newFixedThreadPool(
-                Runtime.getRuntime().availableProcessors()
-        );
+
         int[] corrects = new int[3];
         int max = 0;
 

@@ -3,8 +3,6 @@ package com.programmers.exhaustiveSearch;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class 수식최대화 {
 
